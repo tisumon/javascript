@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="container">
+
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>Entry Height</th>
+            <td><input type="number" id="height"/></td>
+        </tr>
+        <tr>
+            <th>Entry width</th>
+            <td><input type="number" id="width"/></td>
+        </tr>
+        <tr>
+            <th>Entry Background Color</th>
+            <td><input type="color" id="backgroundColor"/></td>
+        </tr>
+        <tr>
+        <th></th>
+        <td> <button type="button" id="btn">Create New Div</button></td>
+        </tr>
+    </table>
+</div>
+
+    <script>
+        document.write('<h1>Hello JavaScript</h1>');
+
+        var name = 'BITM';
+        document.write(name);
+        document.write('<br/>');
+        var firstName ='BITM';
+        var secondName='BASIS';
+
+        document.write(firstName+' '+secondName);
+        document.write('<br/>');
+
+        var x=10;
+        var y=30;
+        var z=x+y;
+
+         document.write(z);
+         document.write('<br/>');
+
+        var x=10;
+        var y=30;
+        if(y>x)
+        {
+            document.write('Hello World!');
+        }
+        document.write('<br/>');
+
+        for(i=1;i<=3;i++)
+        {
+            document.write('Hello World!.<br>');
+        }
+        document.write('<br/>');
+
+        var data=[10,20,30,'bitm','basis','seip',true,100.200];
+        document.write(data[5]);
+        document.write('<br/>');
+
+        var data=[10,20,30,'bitm','basis','seip',true,100.200];
+        for(key in data)
+        {
+            document.write(data[key]+'<br>');
+        }
+        document.write('<br/>');
+
+        var student=[
+            {
+                'name':'Tareq Khan',
+                'mobile':'01916879408',
+                'email':'khan@gmail.com'
+            },
+            {
+                'name':'Rifah Khan',
+                'mobile':'01916879408',
+                'email':'rifah@gmail.com'
+            },
+            {
+                'name':'Sumon Khan',
+                'mobile':'01916879408',
+                'email':'sumon@gmail.com'
+            }
+        ];
+
+        // document.write(student[0].name);
+        for(key in student)
+        {
+            document.write(student[key].name+' '+student[key].mobile+' '+student[key].email+'<br>');
+        }
+        // console.log(student);
+        document.write('<br/>');
+
+        function createDiv(height,width,color)
+        {
+           var div = document.createElement('div');
+           div.style.height = height+'px';
+           div.style.width = width+'px';
+           div.style.backgroundColor = color;
+          var containerDiv = document.getElementById('container');
+          containerDiv.append(div);
+        }
+
+        var btn = document.getElementById('btn');
+        btn.onclick= function(){
+            var height = document.getElementById('height').value;
+            var width = document.getElementById('width').value;
+            var backgroundColor = document.getElementById('backgroundColor').value;
+            createDiv(height,width,backgroundColor);
+        }
+        // createDiv(100,200,'red');
+        // document.write('<br>');
+        // createDiv(300,400,'black');
+        // document.write('<br>');
+        // createDiv(400,200,'green');
+        // document.write('<br>');
+
+
+
+    </script>
+</body>
+</html>
